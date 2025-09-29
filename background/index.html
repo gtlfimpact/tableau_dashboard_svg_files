@@ -1,32 +1,37 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>background</title>
-    <style>
-      html, body { margin:0; padding:0; }
-      .svg-wrap {
-        width: 100%;
-        aspect-ratio: 1200 / 6336;   /* matches your viewBox */
-      }
-      .svg-wrap > svg {
-        width: 100%;
-        height: 100%;
-        display: block;
-      }
-      * { vector-effect: non-scaling-stroke; }
-    </style>
-  </head>
-  <body>
-    <div class="svg-wrap">
-      <!-- paste your raw SVG markup here -->
-      <!-- remove the XML line if present: <?xml version="1.0" ... ?> -->
-      <svg xmlns="http://www.w3.org/2000/svg"
-           xmlns:xlink="http://www.w3.org/1999/xlink"
-           version="1.1"
-           viewBox="0 0 1200 6336"
-           preserveAspectRatio="xMidYMid meet">
-   <defs>
+<head>
+  <meta charset="utf-8" />
+  <title>dashboard-svg</title>
+
+  <!-- Load a webfont so Safari doesn’t substitute metrics -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    html, body { margin:0; }
+    /* lock the aspect ratio so height never collapses */
+    .svg-wrap { width:100%; aspect-ratio: 1200 / 6336; }
+    .svg-wrap > svg { width:100%; height:100%; display:block; }
+
+    /* make text and strokes consistent across browsers */
+    svg text {
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      font-kerning: normal;
+      font-variant-ligatures: normal;
+    }
+    svg * { vector-effect: non-scaling-stroke; }
+  </style>
+</head>
+<body>
+  <div class="svg-wrap">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         version="1.1"
+         viewBox="0 0 1200 6336"
+         preserveAspectRatio="xMidYMin meet">
+  <defs>
     <style>
       .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8 {
         fill: none;
@@ -4998,8 +5003,7 @@
     <rect class="st26" x="509.54" y="-550.09" width="159.08" height="159.08"/>
   </g>
 </svg>
-
-      </svg>
-    </div>
-  </body>
+    </svg>
+  </div>
+</body>
 </html>
